@@ -17,9 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
-from mainApp.views import index_page
+from mainApp.views import index_page, demand_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index_page),
+    path('demand/', demand_page)
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
