@@ -9,4 +9,23 @@
     <img src="../../{{ demand.salaryByYearForProfession }}" alt="">
     <h2>Вакансии по годам для выбранной профессии</h2>
     <img src="../../{{ demand.vacancyByYearForProfession }}" alt="">
+    <h2 align="center">Статистика по годам</h2>
+    <table class="table1">
+        <tr>
+            <th class="border" align="center">{{ '' }}</th>
+            <th class="border" align="center">{{ '' }}</th>
+            <th class="border" align="center">{{ '' }}</th>
+            <th class="border" align="center">{{ '' }}</th>
+            <th class="border" align="center">{{ '' }}</th>
+        </tr>
+        {% for s in statistic %}
+            <tr>
+                <td class="border" align="center">{{ s.year }}</td>
+                <td class="border" align="center">{{ s.avgSalary }}</td>
+                <td class="border" align="center">{{ s.avgSalaryForProfession }}</td>
+                <td class="border" align="center">{{ s.countVacancy }}</td>
+                <td class="border" align="center">{{ s.countVacancyForProfession }}</td>
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock main %}

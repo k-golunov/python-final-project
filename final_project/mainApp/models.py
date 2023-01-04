@@ -16,7 +16,7 @@ class Profession(models.Model):
 
 
 class Demand(models.Model):
-    salaryByYear = models.ImageField('График зп по годам',upload_to='./static/image')
+    salaryByYear = models.ImageField('График зп по годам', upload_to='./static/image')
     vacancyByYear = models.ImageField(upload_to='./static/image')
     salaryByYearForProfession = models.ImageField(upload_to='./static/image')
     vacancyByYearForProfession = models.ImageField(upload_to='./static/image')
@@ -40,10 +40,10 @@ class SalaryByCities(models.Model):
         verbose_name = 'География'
         verbose_name_plural = 'Города и их зп'
 
+
 class VacancyByCities(models.Model):
     city = models.TextField('Город')
     vacancy = models.TextField('Доля вакансий')
-
 
     def __str__(self):
         return self.city
@@ -51,3 +51,18 @@ class VacancyByCities(models.Model):
     class Meta:
         verbose_name = 'География'
         verbose_name_plural = 'Города и доля вакансий'
+
+
+class StatisticsByYear(models.Model):
+    year = models.IntegerField('Год')
+    avgSalary = models.IntegerField('Средняя зп')
+    avgSalaryForProfession = models.IntegerField('Средняя зп c# программист')
+    countVacancy = models.IntegerField('Количество вакансий')
+    countVacancyForProfession = models.IntegerField('Количество вакансий c# программист')
+
+    def __str__(self):
+        return self.year
+
+    class Meta:
+        verbose_name = 'Статистика'
+        verbose_name_plural = 'Статистика по годам'
