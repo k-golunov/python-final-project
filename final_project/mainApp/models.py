@@ -22,8 +22,32 @@ class Demand(models.Model):
     vacancyByYearForProfession = models.ImageField(upload_to='./static/image')
 
     def __str__(self):
-        return 'Восстребованость'
+        return 'Графики'
 
     class Meta:
-        verbose_name = 'Восстребованость'
-        verbose_name_plural = 'Восстребованость'
+        verbose_name = 'График'
+        verbose_name_plural = 'Графики'
+
+
+class SalaryByCities(models.Model):
+    city = models.TextField('Город')
+    salary = models.TextField('Уровень зарплат')
+
+    def __str__(self):
+        return self.city
+
+    class Meta:
+        verbose_name = 'География'
+        verbose_name_plural = 'Города и их зп'
+
+class VacancyByCities(models.Model):
+    city = models.TextField('Город')
+    vacancy = models.TextField('Доля вакансий')
+
+
+    def __str__(self):
+        return self.city
+
+    class Meta:
+        verbose_name = 'География'
+        verbose_name_plural = 'Города и доля вакансий'

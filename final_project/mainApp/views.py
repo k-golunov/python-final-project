@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from mainApp.models import Profession, Demand
+from mainApp.models import Profession, Demand, SalaryByCities, VacancyByCities
 
 
 # Create your views here.
@@ -17,3 +17,10 @@ def demand_page(request):
         'demand': Demand.objects.get(id=1)
     }
     return render(request, 'demand.html', context=data)
+
+def geography_page(request):
+    data = {
+        'salaryByCities': SalaryByCities.objects.all(),
+        'vacancyByCities': VacancyByCities.objects.all(),
+    }
+    return render(request, 'geography.html', context=data)

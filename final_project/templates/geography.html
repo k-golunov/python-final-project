@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <h2 align="center">Статистика по городам</h2>
+    <table class="stat_table1">
+        <tr>
+            <th class="border" align="center">{{ 'Город' }}</th>
+            <th class="border" align="center">{{ 'Уровень зарплат' }}</th>
+        </tr>
+        {% for salary in salaryByCities %}
+        <tr>
+            <td class="border" align="center">{{salary.city}}</td>
+            <td class="border" align="center">{{salary.salary}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <table class="stat_table2">
+        <tr>
+            <th class="border" align="center">{{ 'Город' }}</th>
+            <th class="border" align="center">{{ 'Доля вакансий' }}</th>
+        </tr>
+        {% for vacancy in vacancyByCities %}
+            <tr>
+                <td class="border" align="center">{{ vacancy.city }}</td>
+                <td class="border" align="center">{{ vacancy.vacancy }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock main %}
