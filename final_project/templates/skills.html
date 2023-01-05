@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <h2 align="center">Топ 10 скиллов</h2>
+    <table class="stat_table1">
+        <tr>
+            <th class="border" align="center">{{ 'Номер' }}</th>
+            <th class="border" align="center">{{ 'Скилл' }}</th>
+        </tr>
+        {% for s in skills %}
+        <tr>
+            <td class="border" align="center">{{ s.number }}</td>
+            <td class="border" align="center">{{ s.skill }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock main %}

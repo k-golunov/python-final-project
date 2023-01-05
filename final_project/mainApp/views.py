@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from mainApp.models import Profession, Demand, SalaryByCities, VacancyByCities, StatisticsByYear
+from mainApp.models import Profession, Demand, SalaryByCities, VacancyByCities, StatisticsByYear, Skills
 
 
 # Create your views here.
@@ -26,3 +26,10 @@ def geography_page(request):
         'vacancyByCities': VacancyByCities.objects.all(),
     }
     return render(request, 'geography.html', context=data)
+
+
+def skills_page(request):
+    data = {
+        'skills': Skills.objects.all()
+    }
+    return render(request, 'skills.html', context=data)

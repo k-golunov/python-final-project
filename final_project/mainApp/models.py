@@ -61,8 +61,20 @@ class StatisticsByYear(models.Model):
     countVacancyForProfession = models.IntegerField('Количество вакансий c# программист')
 
     def __str__(self):
-        return self.year
+        return str(self.year)
 
     class Meta:
         verbose_name = 'Статистика'
         verbose_name_plural = 'Статистика по годам'
+
+
+class Skills(models.Model):
+    number = models.IntegerField('Номер')
+    skill = models.TextField('Скилл')
+
+    def __str__(self):
+        return str(self.number)
+
+    class Meta:
+        verbose_name = 'Навык'
+        verbose_name_plural = 'Навыки'
