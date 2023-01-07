@@ -1,21 +1,28 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static "css/styles.css" %}" />
 </head>
-<body>
-<header class="main-header">
-    <p>C# Программист</p>
-</header>
-<main>
-    {% block main %}
-    {% endblock main %}
-</main>
-<footer>
-    <p>Сайт сделан в рамках итогового проекта по курсу Технологии программирования на Python</p>
-    <p>Выполнил: Голунов Константин Александрович</p>
-    <p>Группа: РИ-210943</p>
-</footer>
+<div class="wrapper">
+    <header class="header">
+        <p>C# Программист</p>
+    </header>
+    <div class="menu">
+        <a href="">Главная</a>
+        <a href="">Что-то еще</a>
+    </div>
+    <div class="content">
+        {% block main %}
+        {% endblock main %}
+    </div>
+    <footer class="footer">
+        <p>Сайт сделан в рамках итогового проекта по курсу Технологии программирования на Python</p>
+        <p>Выполнил: Голунов Константин Александрович</p>
+        <p>Группа: РИ-210943</p>
+    </footer>
+</div>
 </body>
 </html>
