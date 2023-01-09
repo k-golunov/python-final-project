@@ -4,9 +4,9 @@
 }
 
 .header {
-    width: 100%;
+    width: 90%;
+    margin-left: 10%;
     height: 10%;
-    background: yellow;
 }
 
 .wrapper {
@@ -16,28 +16,32 @@
 
 .menu {
     width: 10%;
-    background: aqua;
     position: absolute;
-    height: 500px;
+    height: 100%;
+    background: #9d0fff;
 }
 
 .content {
     width : 80%;
     margin-left: 10%;
     margin-right: 10%;
-    background: red;
     padding-bottom: 90px;
 }
 
-.body {
-    color: yellow;
+body {
+    background: purple;
     height: 100%;
-    margin:0px;
+    margin: 0;
+    color: white;
+}
+
+p {
+    color: white;
 }
 
 .footer {
-    background: blue;
     height: 200px;
-    width: 100%;
+    width: 90%;
+    margin-left: 10%;
     position: absolute;
 }

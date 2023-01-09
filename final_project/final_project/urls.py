@@ -21,8 +21,8 @@ from mainApp.views import index_page, demand_page, geography_page, skills_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index_page),
-    path('demand/', demand_page),
-    path('geography/', geography_page),
-    path('skills/', skills_page),
+    path('', index_page, name="index"),
+    path('demand/', demand_page, name='demand'),
+    path('geography/', geography_page, name='geography'),
+    path('skills/', skills_page, name='skills'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
