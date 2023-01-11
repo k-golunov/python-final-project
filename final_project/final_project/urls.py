@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
-from mainApp.views import index_page, demand_page, geography_page, skills_page
+from mainApp.views import index_page, demand_page, geography_page, skills_page, api_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +25,5 @@ urlpatterns = [
     path('demand/', demand_page, name='demand'),
     path('geography/', geography_page, name='geography'),
     path('skills/', skills_page, name='skills'),
+    path('api/', api_page, name='api'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

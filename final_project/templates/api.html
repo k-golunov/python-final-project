@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block main %}
+    {% for v in vacancy %}
+        <ol>
+            <li>{{ v.name }}</li>
+            <ul>
+                <li>{{ v.description }}</li>
+                <li>{{ v.key_skills }}</li>
+                <li>{{ v.company }}</li>
+                <li>{{ v.area_name }}</li>
+                <li>{{ v.published_at }}</li>
+                <li>{{ v.salary }}</li>
+            </ul>
+        </ol>
+    {% endfor %}
+{% endblock main %}

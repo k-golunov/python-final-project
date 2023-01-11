@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+from mainApp import GetApiData
 from mainApp.models import Profession, Demand, SalaryByCities, VacancyByCities, StatisticsByYear, Skills
 
 
@@ -33,3 +34,9 @@ def skills_page(request):
         'skills': Skills.objects.all()
     }
     return render(request, 'skills.html', context=data)
+
+def api_page(request):
+    data = {
+        'vacancy': GetApiData.GetData()
+    }
+    return render(request, 'api.html', context=data)
