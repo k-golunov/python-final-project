@@ -1,17 +1,20 @@
 {% extends "base.html" %}
 
 {% block main %}
-    {% for v in vacancy %}
-        <ol>
-            <li>{{ v.name }}</li>
-            <ul>
-                <li>{{ v.description }}</li>
-                <li>{{ v.key_skills }}</li>
-                <li>{{ v.company }}</li>
-                <li>{{ v.area_name }}</li>
-                <li>{{ v.published_at }}</li>
-                <li>{{ v.salary }}</li>
-            </ul>
-        </ol>
-    {% endfor %}
+    <ul type="circle">
+        {% for v in vacancy %}
+
+                <li>Вакансия: {{ v.name }}
+                    <ul type="circle">
+                        <li>Описание: {{ v.description }}</li>
+                        <li>Навыки: {{ v.key_skills }}</li>
+                        <li>Компания: {{ v.company }}</li>
+                        <li>Регион: {{ v.area_name }}</li>
+                        <li>Время публикации: {{ v.published_at }}</li>
+                        <li>Оклад: {{ v.salary }}</li>
+                    </ul>
+                </li>
+
+        {% endfor %}
+    </ul>
 {% endblock main %}

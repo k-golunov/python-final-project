@@ -23,6 +23,7 @@ def GetData():
     jsonText = request.text
     jsonData = json.loads(jsonText)
     items = jsonData['items']
+    items.reverse()
     for i in items:
         request2 = requests.get(
             f"https://api.hh.ru/vacancies/{i['id']}"
