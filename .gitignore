@@ -152,3 +152,4 @@ cython_debug/
 #.idea/
 /analytics/vacancies_with_skills.csv
 /analytics/vacancies_with_skills_and_salary.csv
+/analytics/vacancies_need.csv
