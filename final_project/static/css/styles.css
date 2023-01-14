@@ -3,10 +3,27 @@
 	padding: 0;
 }
 
-.header {
-    width: 90%;
+TABLE {
+    width: 80%;
+    border-collapse: collapse;
     margin-left: 10%;
-    height: 10%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.border {
+    padding: 3px;
+    border: 1px solid black;
+}
+
+.header {
+    width: 80%;
+    margin-left: 10%;
+    height: 100px;
+    position: absolute;
 }
 
 .wrapper {
@@ -18,25 +35,41 @@
     width: 10%;
     position: absolute;
     height: 100%;
-    background: #9d0fff;
+    /*background: #9d0fff;*/
+    background: #0f137f;
 }
 
-.content {
-    width : 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-bottom: 90px;
+.menu > a {
+    margin-top: 15px;
 }
 
 .right {
     width: 10%;
     position: absolute;
+    /*background: #9d0fff;*/
+    /*background: #543182;*/
+    background: #0f137f;
+    height: 100%;
     margin-left: 90%;
-    background: #9d0fff;
+    margin-right: 0;
 }
 
+.content {
+    width : 80%;
+    margin-left: 10%;
+    /*margin-right: 10%;*/
+    padding-bottom: 90px;
+    padding-top: 100px;
+}
+
+.internal {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
 body {
-    background: #bb67f0;
+    background: #6866d1;
     height: 100%;
     margin: 0;
     color: white;
@@ -48,7 +81,37 @@ p {
 
 .footer {
     height: 200px;
-    width: 90%;
+    width: 80%;
     margin-left: 10%;
     position: absolute;
+    background: #5659c7;
+}
+
+.gLeft {
+    position: absolute;
+    width: 55%;
+}
+
+.gRight{
+    margin-left: 58%;
+    position: absolute;
+    width: 50%;
+}
+
+.grafics {
+    position: relative;
+    height: 900px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.internalskills {
+    height: 900px;
+}
+
+.external{
+    width: 100%;
+    position: absolute;
+    background: #0f137f;
+    height: 200px;
 }
