@@ -26,4 +26,5 @@ urlpatterns = [
     path('geography/', geography_page, name='geography'),
     path('skills/', skills_page, name='skills'),
     path('api/', api_page, name='api'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+              # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
