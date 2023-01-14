@@ -78,3 +78,17 @@ class Skills(models.Model):
     class Meta:
         verbose_name = 'Навык'
         verbose_name_plural = 'Навыки'
+
+
+class GeographyGraphics(models.Model):
+    salaryByCity = models.ImageField(upload_to='./static/image')
+    vacancyByCity = models.ImageField(upload_to='./static/image')
+    salaryByCityForProfession = models.ImageField(upload_to='./static/image')
+    vacancyByCityForProfession = models.ImageField(upload_to='./static/image')
+
+    def __str__(self):
+        return 'Графики для географии'
+
+    class Meta:
+        verbose_name = 'График'
+        verbose_name_plural = 'Графики'

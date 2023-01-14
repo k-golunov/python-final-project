@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from mainApp import GetApiData
-from mainApp.models import Profession, Demand, SalaryByCities, VacancyByCities, StatisticsByYear, Skills
+from mainApp.models import Profession, Demand, SalaryByCities, VacancyByCities, StatisticsByYear, Skills, GeographyGraphics
 
 
 # Create your views here.
@@ -25,6 +25,7 @@ def geography_page(request):
     data = {
         'salaryByCities': SalaryByCities.objects.all(),
         'vacancyByCities': VacancyByCities.objects.all(),
+        'graphics': GeographyGraphics.objects.get(id=1),
     }
     return render(request, 'geography.html', context=data)
 
