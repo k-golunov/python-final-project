@@ -91,4 +91,14 @@ class GeographyGraphics(models.Model):
 
     class Meta:
         verbose_name = 'График'
-        verbose_name_plural = 'Графики'
+        verbose_name_plural = 'Графики для географии'
+
+
+class SkillsGraphics(models.Model):
+    top_skills = models.ImageField(upload_to='./static/image')
+    def __str__(self):
+        return 'Графики для скиллов'
+
+    class Meta:
+        verbose_name = 'График'
+        verbose_name_plural = 'Графики для скиллов'
