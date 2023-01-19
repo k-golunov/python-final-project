@@ -4,14 +4,15 @@
     <ul type="circle">
         {% for v in vacancy %}
 
-                <li>Вакансия: {{ v.name }}
+                <li><h3>Вакансия: {{ v.name }}</h3>
                     <ul type="circle">
-                        <li>Описание: {{ v.description }}</li>
-                        <li>Навыки: {{ v.key_skills }}</li>
-                        <li>Компания: {{ v.company }}</li>
-                        <li>Регион: {{ v.area_name }}</li>
-                        <li>Время публикации: {{ v.published_at }}</li>
-                        <li>Оклад: {{ v.salary }}</li>
+                        <li><b>Описание:</b> {{ v.description }}</li>
+                        <li><b>Навыки:</b> {{ v.key_skills }}</li>
+                        <li><b>Компания:</b> {{ v.company }}</li>
+                        <li><b>Регион:</b> {{ v.area_name }}</li>
+                        <li><b>Время публикации:</b> {{ v.published_at }}</li>
+                        <li><b>Оклад:</b> {{ v.salary }}</li>
+                        <br>
                     </ul>
                 </li>
 

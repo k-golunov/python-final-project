@@ -106,7 +106,8 @@ p {
 }
 
 .internalskills {
-    height: 900px;
+    height: 300px;
+    margin-top: 50px;
 }
 
 .external{
@@ -114,4 +115,8 @@ p {
     position: absolute;
     background: #0f137f;
     height: 200px;
+}
+
+.skillsgraphics {
+    margin-left: 34%;
 }

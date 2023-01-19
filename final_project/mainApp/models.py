@@ -26,7 +26,7 @@ class Demand(models.Model):
 
     class Meta:
         verbose_name = 'График'
-        verbose_name_plural = 'Графики'
+        verbose_name_plural = 'Графики для востребованности'
 
 
 class SalaryByCities(models.Model):
@@ -96,9 +96,35 @@ class GeographyGraphics(models.Model):
 
 class SkillsGraphics(models.Model):
     top_skills = models.ImageField(upload_to='./static/image')
+
+
     def __str__(self):
         return 'Графики для скиллов'
 
     class Meta:
         verbose_name = 'График'
         verbose_name_plural = 'Графики для скиллов'
+
+
+class SalaryByCitiesNeeded(models.Model):
+    city = models.TextField('Город')
+    salary = models.TextField('Уровень зарплат')
+
+    def __str__(self):
+        return self.city
+
+    class Meta:
+        verbose_name = 'География'
+        verbose_name_plural = 'Города и их зп c#'
+
+
+class VacancyByCitiesNeeded(models.Model):
+    city = models.TextField('Город')
+    vacancy = models.TextField('Доля вакансий')
+
+    def __str__(self):
+        return self.city
+
+    class Meta:
+        verbose_name = 'География'
+        verbose_name_plural = 'Города и доля вакансий c#'

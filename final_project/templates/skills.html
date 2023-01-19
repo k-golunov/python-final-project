@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 
 {% block main %}
+    <!--<div class="skillsgraphics">-->
+        <h2 align="center">Самые популярные навыки C# Программиста</h2>
+        <img align="center" class="skillsgraphics" src="../media/{{ graphics.top_skills }}" width="400" height="400" alt="">
+    <!--</div>-->
+    <div class="internalskills">
     <h2 align="center">Топ 10 скиллов</h2>
     <table class="stat_table1">
         <tr>
@@ -14,4 +19,5 @@
         </tr>
         {% endfor %}
     </table>
+    </div>
 {% endblock main %}

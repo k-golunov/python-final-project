@@ -10,3 +10,5 @@ admin.site.register(Skills)
 
 admin.site.register(GeographyGraphics)
 admin.site.register(SkillsGraphics)
+admin.site.register(SalaryByCitiesNeeded)
+admin.site.register(VacancyByCitiesNeeded)

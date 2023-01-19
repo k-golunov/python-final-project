@@ -11,24 +11,30 @@
         <h1 align="center">C# Программист</h1>
     </header>
     <div class="menu">
-        <a href={% url "index" %}>Главная</a>
-        <a href={% url "demand" %}>Восстребованость</a>
+        <a href={% url "index" %}>Главная</a><br>
+        <a href={% url "demand" %}>Восстребованость</a><br>
         <a href={% url "geography" %}>География</a><br>
-        <a href={% url "skills" %}>Скиллы</a>
+        <a href={% url "skills" %}>Скиллы</a><br>
         <a href={% url "api" %}>Последние вакансии</a>
-    </div>
-    <div class="content">
-        {% block main %}
-        {% endblock main %}
     </div>
     <div class="right">
 
     </div>
-    <footer class="footer">
-        <p>Сайт сделан в рамках итогового проекта по курсу Технологии программирования на Python</p>
-        <p>Выполнил: Голунов Константин Александрович</p>
-        <p>Группа: РИ-210943</p>
-    </footer>
+    <div class="content">
+        <div class="internal">
+        {% block main %}
+        {% endblock main %}
+        </div>
+    </div>
+    <div class="external">
+        <footer class="footer">
+            <hr>
+            <p>Сайт сделан в рамках итогового проекта по курсу Технологии программирования на Python</p>
+            <p>Выполнил: Голунов Константин Александрович</p>
+            <p>Группа: РИ-210943</p>
+            <p>АТ-12</p>
+        </footer>
+    </div>
 </div>
 </body>
 </html>
